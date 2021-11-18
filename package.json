@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "watch:sass": "sass --watch src/styly/index.scss dist/index.css",
-  	"build:sass": "sass src/styly/index.scss dist/index.css",
-  	"watch:eleventy": "eleventy --serve",
-  	"build:eleventy": "eleventy",
-  	"dev": "npm-run-all build:sass --parallel watch:*",
-  	"build": "npm-run-all build:*"
+    "build:sass": "sass src/styly/index.scss dist/index.css",
+    "watch:eleventy": "eleventy --serve",
+    "build:eleventy": "eleventy",
+    "dev": "npm-run-all build:sass --parallel watch:*",
+    "build": "npm-run-all build:*"
   },
   "repository": {
     "type": "git",

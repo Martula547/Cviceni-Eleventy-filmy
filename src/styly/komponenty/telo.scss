@@ -1,0 +1,40 @@
+.layout__telo {
+    width: 100%;
+    max-width: $sirka-obsahu;
+    padding: 32px 16px;
+    margin: 0 auto;
+    display: block;
+}
+
+li {
+    display: list-item;
+}
+
+li.seznam__polozka {
+    line-height: 1.5;
+}
+
+.seznam {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.seznam__odkaz {
+    color: #3d5afe;
+    text-decoration: none;
+}
+
+.seznam__odkaz::before {
+    content: "";
+    margin-bottom: 0.1em;
+    width: 0.5em;
+    height: 0.5em;
+    background-color: currentColor;
+    display: inline-block;
+    margin-right: 0.5em;
+}
+h2.index_nadpis {
+    font-size: 32px;
+    margin: 0 0 16px 0;
+}

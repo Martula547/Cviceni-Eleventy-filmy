@@ -6,9 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FILMY.cz</title>
     <link rel="stylesheet" href="/index.css">
+    <link rel="shortcut icon" href="/obrazky/favicon.svg"/>
 </head>
 <body>
-{% include "hlavicka.njk" %}
-{{ content | safe }}
+    <div class="layout>
+        <div class="layout__hlavicka">
+            {% include "hlavicka.njk" %}
+        </div>
+        <div class="layout__telo">
+            {{ content | safe }}
+        </div>
+        <div class="layout__paticka">
+            {% include "paticka.njk" %}
+        </div>
+    </div>
 </body>
 </html>

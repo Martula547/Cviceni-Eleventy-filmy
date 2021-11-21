@@ -13,12 +13,12 @@ permalink: "/film/{{ film.nazev | slug }}/"
     <th>Rok:</th><td>{{ film.rok }}</td>
     </tr>
     <tr>
-    <th>Země:</th><td>{{ film.zeme }}</td>
+    <th>Země:</th><td>{{ film.zeme | join(", ") }}</td>
     </tr>
     <tr>
-    <th>Žánr:</th><td>{{ film.zanr }}</td>
+    <th>Žánr:</th><td>{{ film.zanr | join(" / ") }}</td>
     </tr>
     <tr>
-    <th>Délka:</th><td>{{ film.delka }}</td>
+    <th>Délka:</th><td>{{ film.delka }} minut</td>
     </tr>
   </table>

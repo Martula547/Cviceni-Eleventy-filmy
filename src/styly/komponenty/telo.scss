@@ -40,7 +40,20 @@ li.seznam__polozka {
     display: inline-block;
     margin-right: 0.5em;
 }
-h2.index_nadpis {
+.nadpis {
     font-size: 32px;
     margin: 0 0 16px 0;
+}
+table {
+    margin: 0;
+}
+
+th {
+    text-align: left;
+}
+
+.odkaz__zdroj {
+    font-style: italic;
+    text-decoration: none;
+    color: $doplnkova-barva;
 }

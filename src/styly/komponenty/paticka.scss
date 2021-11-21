@@ -12,16 +12,18 @@ h2.paticka__nadpis {
     color: rgb(32, 32, 32);;
 }
 
-.paticka__polozka {
-    list-style-type: none;
+.li {
+    color: rgb(58, 57, 57);
+    margin: 0;
 }
-.paticka__odkaz {
+
+a {
     text-decoration: none;
-    line-height: 1.5;
     color: rgb(58, 57, 57);
 }
 
 ul {
     padding-left: 0;
-    margin: 0;
+    list-style-type: none;
+    line-height: 1.5;
 }

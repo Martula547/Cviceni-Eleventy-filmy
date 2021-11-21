@@ -7,7 +7,7 @@ pagination:
 permalink: "/film/{{ film.nazev | slug }}/"
 ---
 
-  <h2>{{ film.nazev }}</h2>
+  <h2 class="nadpis">{{ film.nazev }}</h2>
   <table>
     <tr>
     <th>Rok:</th><td>{{ film.rok }}</td>
@@ -25,6 +25,5 @@ permalink: "/film/{{ film.nazev | slug }}/"
 
 
   <h2>Obsah</h2>
-  <p>
-  {{ film.obsah.text }}
-  </p> 
+  <p>{{ film.obsah.text }} (<a class="odkaz__zdroj" href="{{ film.obsah.autor.odkaz }}">{{ film.obsah.autor.jmeno }})</a></p>
+  

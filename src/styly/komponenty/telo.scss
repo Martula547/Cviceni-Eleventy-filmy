@@ -1,6 +1,12 @@
+.layout {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+}
+
 .layout__telo {
     width: 100%;
-    max-width: $sirka-obsahu;
+    max-width: 52rem;
     padding: 32px 16px;
     margin: 0 auto;
     display: block;
@@ -21,7 +27,7 @@ li.seznam__polozka {
 }
 
 .seznam__odkaz {
-    color: #3d5afe;
+    color: $doplnkova-barva;
     text-decoration: none;
 }
 

@@ -2,4 +2,26 @@ div.paticka__casti {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
     gap: 16px;
+    max-width: 52rem;
+    padding: 16px;
+    margin: 0 auto;
+}
+
+h2.paticka__nadpis {
+    font-size: 18px;
+    color: rgb(32, 32, 32);;
+}
+
+.paticka__polozka {
+    list-style-type: none;
+}
+.paticka__odkaz {
+    text-decoration: none;
+    line-height: 1.5;
+    color: rgb(58, 57, 57);
+}
+
+ul {
+    padding-left: 0;
+    margin: 0;
 }

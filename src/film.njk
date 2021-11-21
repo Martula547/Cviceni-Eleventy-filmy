@@ -22,3 +22,9 @@ permalink: "/film/{{ film.nazev | slug }}/"
     <th>Délka:</th><td>{{ film.delka }} minut</td>
     </tr>
   </table>
+
+
+  <h2>Obsah</h2>
+  <p>
+  {{ film.obsah.text }}
+  </p> 

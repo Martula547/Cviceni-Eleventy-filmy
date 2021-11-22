@@ -144,6 +144,7 @@ Všechny stránky/podstránky jednoho webu mívají společný HTML základ, kte
 
   body {
   	font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
   }
   ```
 

@@ -6,24 +6,39 @@ pagination:
   alias: film
 permalink: "/film/{{ film.nazev | slug }}/"
 ---
+<div class="detail">
+    <div class="detail__hlavni">
+      <h2 class="nadpis">{{ film.nazev }}</h2>
+        <table>
+          <tr>
+          <th>Rok:</th><td>{{ film.rok }}</td>
+          </tr>
+          <tr>
+          <th>Země:</th><td>{{ film.zeme | join(", ") }}</td>
+          </tr>
+          <tr>
+          <th>Žánr:</th><td>{{ film.zanr | join(" / ") }}</td>
+          </tr>
+          <tr>
+          <th>Délka:</th><td>{{ film.delka }} minut</td>
+          </tr>
+        </table>
 
-  <h2 class="nadpis">{{ film.nazev }}</h2>
-  <table>
-    <tr>
-    <th>Rok:</th><td>{{ film.rok }}</td>
-    </tr>
-    <tr>
-    <th>Země:</th><td>{{ film.zeme | join(", ") }}</td>
-    </tr>
-    <tr>
-    <th>Žánr:</th><td>{{ film.zanr | join(" / ") }}</td>
-    </tr>
-    <tr>
-    <th>Délka:</th><td>{{ film.delka }} minut</td>
-    </tr>
-  </table>
+      <h2>Obsah</h2>
+          <p>{{ film.obsah.text }} <a class="odkaz__zdroj" href="{{ film.obsah.autor.odkaz }}">({{ film.obsah.autor.jmeno }})</a></p>
+    </div>
+    <div class="detail__vedlejsi">
+        <img class="detail__plakat" src="{{ film.plakat.url }}" width="{{ film.plakat.sirka }}" height="{{ film.plakat.vyska }}" alt="plakat">
+        <div class="hodnoceni">
+          <h3>Hodnocení</h3>
+        </div>
+        <div class="souvisejicifilmy">
+          <h3>Související filmy</h3>
+          <ul>
+            <li><a href="/film/"{{ film.souvisejici.nazev }}">{{ film.souvisejici.nazev }} </a>
+            </li>
+          </ul>
+        </div>
 
-
-  <h2>Obsah</h2>
-  <p>{{ film.obsah.text }} (<a class="odkaz__zdroj" href="{{ film.obsah.autor.odkaz }}">{{ film.obsah.autor.jmeno }})</a></p>
-  
+    </div>
+  </div>

@@ -3,7 +3,6 @@
     grid-template-rows: auto 1fr auto;
 
 }
-
 .layout__telo {
     width: 100%;
     max-width: 52rem;
@@ -11,26 +10,21 @@
     margin: 0 auto;
     display: block;
 }
-
 li {
     display: list-item;
 }
-
 li.seznam__polozka {
     line-height: 1.5;
 }
-
 .seznam {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
-
 .seznam__odkaz {
     color: $doplnkova-barva;
     text-decoration: none;
 }
-
 .seznam__odkaz::before {
     content: "";
     margin-bottom: 0.1em;
@@ -47,13 +41,35 @@ li.seznam__polozka {
 table {
     margin: 0;
 }
-
 th {
     text-align: left;
 }
-
 .odkaz__zdroj {
     font-style: italic;
     text-decoration: none;
     color: $doplnkova-barva;
+}
+.odkaz__puvoddat {
+    text-decoration: underline;
+    color: $hlavni-barva;
+}
+@media (min-width: 50rem) {
+.detail {
+    grid-template-columns: 1fr 12rem;
+    }
+}
+.detail {
+    display: grid;
+    gap: 0 32px;
+}
+.detail__plakat {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+h3 {
+    font-size: 24px;
+}
+.hodnoceni {
+    display: flex;
 }

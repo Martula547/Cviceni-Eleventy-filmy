@@ -23,7 +23,6 @@ li.seznam__polozka {
 }
 .seznam__odkaz {
     color: $doplnkova-barva;
-    text-decoration: none;
 }
 .seznam__odkaz::before {
     content: "";
@@ -34,6 +33,7 @@ li.seznam__polozka {
     display: inline-block;
     margin-right: 0.5em;
 }
+
 .nadpis {
     font-size: 32px;
     margin: 0 0 16px 0;
@@ -46,7 +46,6 @@ th {
 }
 .odkaz__zdroj {
     font-style: italic;
-    text-decoration: none;
     color: $doplnkova-barva;
 }
 .odkaz__puvoddat {
@@ -69,6 +68,7 @@ th {
 }
 h3 {
     font-size: 24px;
+    margin-bottom: 0;
 }
 .hodnoceni {
     display: flex;

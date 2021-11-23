@@ -29,16 +29,20 @@ permalink: "/film/{{ film.nazev | slug }}/"
     </div>
     <div class="detail__vedlejsi">
         <img class="detail__plakat" src="{{ film.plakat.url }}" width="{{ film.plakat.sirka }}" height="{{ film.plakat.vyska }}" alt="plakat">
-        <div class="hodnoceni">
-          <h3>Hodnocení</h3>
-        </div>
-        <div class="souvisejicifilmy">
-          <h3>Související filmy</h3>
-          <ul>
-            <li><a href="/film/"{{ film.souvisejici.nazev }}">{{ film.souvisejici.nazev }} </a>
-            </li>
-          </ul>
-        </div>
+          <div class="hodnoceni">
+            <h3>Hodnocení</h3>
+          </div>
+
+          <div class="souvisejicifilmy">
+            <h3>Související filmy</h3>
+            <ul>
+              {% for souvisejici in film.souvisejici %}
+                <li>
+                  <a class="seznam__odkaz" href="/film/{{ souvisejici.nazev | slug }}">{{ souvisejici.nazev }}</a>
+                </li>
+             {% endfor %}
+            </ul>
+          </div>
 
     </div>
   </div>
